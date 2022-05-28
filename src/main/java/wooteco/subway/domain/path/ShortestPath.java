@@ -57,8 +57,8 @@ public class ShortestPath {
         return (int) ((Math.ceil((distance - OVER_FEE_DISTANCE) / EIGHT_KM)) * OVER_FEE) + FEE_50KM;
     }
 
-    private void validateRoute(GraphPath<Station, LineWeightedEdge> route) {
-        if (route == null) {
+    private void validateRoute(GraphPath<Station, LineWeightedEdge> path) {
+        if (path == null) {
             throw new IllegalArgumentException("해당 경로가 존재하지 않습니다.");
         }
     }
