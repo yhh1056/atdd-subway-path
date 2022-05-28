@@ -31,10 +31,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import wooteco.subway.domain.path.fare.vo.Age;
 import wooteco.subway.domain.line.Section;
-import wooteco.subway.domain.path.ShortestPath;
-import wooteco.subway.domain.path.SubwayMap;
+import wooteco.subway.domain.path.fare.vo.Age;
 import wooteco.subway.domain.station.Station;
 
 public class SubwayMapTest {
