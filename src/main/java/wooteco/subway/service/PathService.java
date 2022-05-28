@@ -41,7 +41,7 @@ public class PathService {
 
         List<Station> shortestRoute = shortestPath.getShortestRoute();
         int distance = shortestPath.getShortestDistance();
-        int fare = shortestPath.calculateFare(age);
+        int fare = shortestPath.calculateFare(age.getValue());
         return new PathResponse(toStationResponse(shortestRoute), distance, fare);
     }
 

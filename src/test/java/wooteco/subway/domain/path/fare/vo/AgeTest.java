@@ -24,25 +24,4 @@ class AgeTest {
     void equalAge() {
         assertThat(new Age(20)).isEqualTo(new Age(20));
     }
-
-    @ParameterizedTest(name = "나이 : {0}")
-    @ValueSource(ints = {5, 65})
-    @DisplayName("유아 또는 노인인지 확인한다.")
-    void isOldOrBaby(int age) {
-        assertThat(new Age(age).isOldOrBaby()).isTrue();
-    }
-
-    @ParameterizedTest(name = "나이 : {0}")
-    @ValueSource(ints = {6, 12})
-    @DisplayName("어린이인지 확인한다.")
-    void isChildren(int age) {
-        assertThat(new Age(age).isChildren()).isTrue();
-    }
-
-    @ParameterizedTest(name = "나이 : {0}")
-    @ValueSource(ints = {13, 18})
-    @DisplayName("청소년인지 확인한다.")
-    void isTeenager(int age) {
-        assertThat(new Age(age).isTeenager()).isTrue();
-    }
 }

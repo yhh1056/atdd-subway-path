@@ -72,7 +72,7 @@ public class SubwayMapTest {
 
         ShortestPath fare = graph.getShortestPath(삼성, 성수);
 
-        assertThat(fare.calculateFare(new Age(20))).isEqualTo(1450 + 1000);
+        assertThat(fare.calculateFare(20)).isEqualTo(1450 + 1000);
     }
 
     @Test
@@ -82,7 +82,7 @@ public class SubwayMapTest {
 
         ShortestPath fare = graph.getShortestPath(성수, 건대);
 
-        assertThat(fare.calculateFare(new Age(20))).isEqualTo(1450 + 2000);
+        assertThat(fare.calculateFare(20)).isEqualTo(1450 + 2000);
     }
 
     @Test
@@ -115,7 +115,7 @@ public class SubwayMapTest {
                 List.of(강남_삼성, 삼성_건대, 건대_성수, 합정_왕십리, 합정_성수, 창동_당고개, 왕십리_당고개, 사당_당고개, 잠실_당고개));
 
         ShortestPath shortestPath = subwayMap.getShortestPath(source, target);
-        assertThat(shortestPath.calculateFare(new Age(20))).isEqualTo(fare);
+        assertThat(shortestPath.calculateFare(20)).isEqualTo(fare);
     }
 
     private static List<Arguments> getSections() {

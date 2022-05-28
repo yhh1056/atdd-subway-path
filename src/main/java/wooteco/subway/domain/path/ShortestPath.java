@@ -32,7 +32,7 @@ public class ShortestPath {
         return (int) path.getWeight();
     }
 
-    public int calculateFare(Age age) {
+    public int calculateFare(int age) {
         AgeDiscountPolicy discountPolicy = AgeDiscountPolicy.find(age);
         int basicFare = calculateOverFare((int) path.getWeight());
         int extraFare = getExtraFare(path.getEdgeList());

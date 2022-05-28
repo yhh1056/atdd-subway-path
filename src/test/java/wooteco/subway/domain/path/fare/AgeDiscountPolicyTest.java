@@ -15,7 +15,7 @@ class AgeDiscountPolicyTest {
     @ValueSource(ints = {13, 18})
     @DisplayName("청소년 할인 정책을 조회한다.")
     void teenagerDiscountPolicy(int age) {
-        AgeDiscountPolicy policy = AgeDiscountPolicy.find(new Age(age));
+        AgeDiscountPolicy policy = AgeDiscountPolicy.find(age);
 
         assertThat(policy).isEqualTo(AgeDiscountPolicy.TEENAGER);
     }
@@ -31,7 +31,7 @@ class AgeDiscountPolicyTest {
     @ValueSource(ints = {6, 12})
     @DisplayName("어린이 할인 정책을 조회한다.")
     void childrenDiscountPolicy(int age) {
-        AgeDiscountPolicy policy = AgeDiscountPolicy.find(new Age(age));
+        AgeDiscountPolicy policy = AgeDiscountPolicy.find(age);
 
         assertThat(policy).isEqualTo(AgeDiscountPolicy.CHILDREN);
     }
@@ -47,7 +47,7 @@ class AgeDiscountPolicyTest {
     @ValueSource(ints = {1, 5, 65})
     @DisplayName("무임 요금 정책을 조회한다.")
     void freeDiscountPolicy(int age) {
-        AgeDiscountPolicy policy = AgeDiscountPolicy.find(new Age(age));
+        AgeDiscountPolicy policy = AgeDiscountPolicy.find(age);
 
         assertThat(policy).isEqualTo(AgeDiscountPolicy.FREE);
     }
