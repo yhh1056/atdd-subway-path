@@ -10,7 +10,7 @@ import wooteco.subway.domain.path.fare.policy.DiscountPolicy;
 class ChildrenDiscountPolicyTest {
 
     @Test
-    @DisplayName("어린이는 350원을 공제한 금액의 20%를 할인한다.")
+    @DisplayName("어린이는 350원을 공제한 금액의 50%를 할인한다.")
     void teenagerDiscountPolicy() {
         DiscountPolicy policy = new ChildrenDiscountPolicy();
         int result = policy.calculate(1250);
