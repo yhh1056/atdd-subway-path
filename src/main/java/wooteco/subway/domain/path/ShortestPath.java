@@ -20,8 +20,8 @@ public class ShortestPath {
     private final GraphPath<Station, LineWeightedEdge> path;
 
     public ShortestPath(GraphPath<Station, LineWeightedEdge> path) {
-        this.path = path;
         validateRoute(path);
+        this.path = path;
     }
 
     public List<Station> getShortestRoute() {
